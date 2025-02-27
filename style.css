@@ -1,0 +1,61 @@
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+.header{
+     height: 10%;
+     text-align: center;
+     border-bottom: 5px solid whitesmoke;
+}
+#description {
+    text-align: center;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    column-gap: 3%;
+   
+
+}
+
+.btn {
+    font-size: 1rem;
+    font-weight: bold;
+}
+#steps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 7rem;
+    padding-right: 7rem;
+}
+
+#stepName {
+    display: flex;
+    justify-content: space-around;
+     position: relative;
+     min-height: 50px;
+}
+
+.active{
+    background-color: blue;
+}
+.Contact {
+    position: absolute;
+    left: 5rem;
+}
+
+.Shipping {
+    position: absolute;
+    left: 33%;
+}
+.Payment {
+    position: absolute;
+    right: 34%
+}
+.Delivered {
+    position: absolute;
+    right: 6rem;
+}
