@@ -6,7 +6,7 @@ const stepperState = {
         "Add shipping address for successful delivery",
         "Complete payment to complete the order",
         "Ready to get delivered!",
-        "Order Delivered successfully!"
+        "Order Delivered successfully! 🎉"
     ],
     currentIndex: 0
 };
@@ -17,6 +17,7 @@ let description = document.getElementById('description');
 let nextButton = document.getElementById('next');
 let previousButton = document.getElementById('previous');
 
+
 const renderUI = () => {
 
     stepsContainer.innerHTML = "";
@@ -24,16 +25,16 @@ const renderUI = () => {
 
     stepperState.steps.forEach((step, index) => { 
 
-     let logo = document.createElement('div');
-       logo.className = "logo";
-       logo.textContent = index+1;
-       logo.style.height = "50px";
-       logo.style.width = "50px";
-       logo.style.borderRadius = "50%";
-       logo.style.display = "flex";
-       logo.style.justifyContent = "center"
-       logo.style.alignItems = "center";
-       logo.style.backgroundColor = "lightgrey";
+     let circle = document.createElement('div');
+       circle.className = "logo";
+       circle.textContent = index+1;
+       circle.style.height = "50px";
+       circle.style.width = "50px";
+       circle.style.borderRadius = "50%";
+       circle.style.display = "flex";
+       circle.style.justifyContent = "center"
+       circle.style.alignItems = "center";
+       circle.style.backgroundColor = "lightgrey";
 
 
      let name = document.createElement('p');
@@ -42,7 +43,7 @@ const renderUI = () => {
 
      stepName.appendChild(name);
 
-     stepsContainer.appendChild(logo);
+     stepsContainer.appendChild(circle);
 
      let line = document.createElement('div');
      if (index < stepperState.steps.length - 1) {
@@ -55,12 +56,13 @@ const renderUI = () => {
     }
 
     if(index < stepperState.currentIndex) {
-         logo.style.backgroundColor = "green";
-         line.style.backgroundColor = "green"
+         circle.style.backgroundColor = "green";
+         circle.innerHTML = "✔";
+         circle.style.backgroundColor = "green"
      }
 
      if(index === stepperState.currentIndex)
-        logo.style.backgroundColor = "blue";
+        circle.style.backgroundColor = "blue";
     
     description.textContent = stepperState.descriptions[stepperState.currentIndex];
 
